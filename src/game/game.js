@@ -1,16 +1,11 @@
 import readlineSync from 'readline-sync';
 
-const randomCeiling = 100;
-
-const isEven = (number) => number % 2 === 0;
-const getRandomInt = (number) => Math.floor(Math.random() * number);
-
-const game = (userName) => {
+const game = (userName, puzzle, solution) => {
   for (let counter = 0; counter < 3; counter += 1) {
-    const number = getRandomInt(randomCeiling);
-    console.log(`Question: ${number}`);
+    const question = puzzle();
+    console.log(`Question: ${question}`);
     const queryUser = readlineSync.question('Your answer: ');
-    const correctAnswear = isEven(number) ? 'yes' : 'no';
+    const correctAnswear = solution(question);
     if (queryUser !== correctAnswear) {
       console.log(`'${queryUser}' is wrong answear ;(. Correct answear was '${correctAnswear}'\nLet's try again`);
       return 'loser';
