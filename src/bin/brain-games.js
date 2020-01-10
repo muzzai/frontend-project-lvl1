@@ -1,5 +1,5 @@
-#!/snap/bin/node
-import { actual } from ".."
+#!/usr/bin/node
+import { actual } from '..';
 
 console.log('Welcome to the Brain Games!');
 
