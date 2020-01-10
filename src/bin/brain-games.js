@@ -1,6 +1,7 @@
 #!/usr/bin/node
-import userName from '..';
+import { wellcome, getUserName } from '..';
 
-console.log('Welcome to the Brain Games!');
+wellcome();
+const user = getUserName();
 
-console.log(`Well, hello, ${userName}`);
+console.log(`Well, hello, ${user}`);
