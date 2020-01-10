@@ -8,8 +8,7 @@ const ops = {
 
 const randomCeiling = 30;
 const number = () => getRandomInt(randomCeiling);
-const randomForOper = () => getRandomInt(3);
-const randomOperation = () => ['*', '-', '+'][randomForOper()];
+const randomOperation = () => ['*', '-', '+'][getRandomInt(3)];
 export const question = () => `${number()} ${randomOperation()} ${number()}`;
 export const solution = (string) => {
   const numbersAndOperation = string.split(' ');

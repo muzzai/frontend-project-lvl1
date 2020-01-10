@@ -12,7 +12,7 @@ const game = (userName, puzzle, solution) => {
     }
     console.log('Correct!');
   }
-  console.log(`Congatulations, ${userName}!`);
+  console.log(`Congrtulations, ${userName}!`);
   return 'winner';
 };
 
