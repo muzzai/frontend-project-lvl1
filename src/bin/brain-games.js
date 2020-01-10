@@ -1,6 +1,6 @@
 #!/usr/bin/node
-import { actual } from '..';
+import userName from '..';
 
 console.log('Welcome to the Brain Games!');
 
-console.log(`Well, hello, ${actual}`);
+console.log(`Well, hello, ${userName}`);
