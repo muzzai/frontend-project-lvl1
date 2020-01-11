@@ -5,9 +5,9 @@ const game = (userName, puzzle, solution) => {
     const question = puzzle();
     console.log(`Question: ${question}`);
     const queryUser = readlineSync.question('Your answer: ');
-    const correctAnswear = solution(question);
-    if (queryUser !== correctAnswear) {
-      console.log(`'${queryUser}' is wrong answear ;(. Correct answear was '${correctAnswear}'\nLet's try again`);
+    const correctAnswer = solution(question);
+    if (queryUser !== correctAnswer) {
+      console.log(`'${queryUser}' is wrong answer ;(. Correct answear was '${correctAnswer}'\nLet's try again`);
       return 'loser';
     }
     console.log('Correct!');
