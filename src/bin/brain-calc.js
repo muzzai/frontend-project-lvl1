@@ -1,10 +1,7 @@
 #!/usr/bin/node
-import { getUserName, wellcome } from '..';
-import game from '../game/game';
-import { question, solution } from '../calc-game/calc-game';
+import { wellcome } from '..';
+import game from '../game';
+import { question, solution } from '../games/calc-game';
 
-wellcome();
-console.log('What is the result of the expression?\n');
-const user = getUserName();
-console.log(`Well, hello, ${user}\n`);
-game(user, question, solution);
+const gameDiscription = 'What is the result of the expression?';
+game(wellcome(gameDiscription), question, solution);

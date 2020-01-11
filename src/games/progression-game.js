@@ -1,9 +1,12 @@
 import { getRandomInt } from '..';
 
+const randomRange = 100;
+
+
 export const question = () => {
   const result = [];
-  const step = getRandomInt(100) + 1;
-  const start = getRandomInt(100);
+  const step = getRandomInt(randomRange) + 1;
+  const start = getRandomInt(randomRange);
   for (let i = 1; i <= 10; i += 1) {
     result.push(start + step * i);
   }
@@ -11,7 +14,6 @@ export const question = () => {
   const strResult = result.reduce((acc, num) => `${acc}${num} `, '');
   return strResult.slice(0, strResult.length - 1);
 };
-
 export const solution = (input) => {
   const numbersFromString = input.split(' ');
   const dotsIndex = numbersFromString.indexOf('..');

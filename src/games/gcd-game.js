@@ -1,7 +1,7 @@
 import { getRandomInt } from '..';
 
-const randomCeiling = 100;
-const number = () => getRandomInt(randomCeiling) + 1;
+const randomRange = 100;
+const number = () => getRandomInt(randomRange);
 
 export const question = () => `${number()} ${number()}`;
 export const solution = (input) => {

@@ -1,10 +1,7 @@
 #!/usr/bin/node
-import { getUserName, wellcome } from '..';
-import game from '../game/game';
-import { question, solution } from '../prime-game/prime';
+import { wellcome } from '..';
+import game from '../game';
+import { question, solution } from '../games/prime';
 
-wellcome();
-console.log('Answear "yes" if given number is prime. Otherwise answear "no".\n');
-const user = getUserName();
-console.log(`Well, hello, ${user}\n`);
-game(user, question, solution);
+const gameDiscription = 'Answear "yes" if given number is prime. Otherwise answear "no".';
+game(wellcome(gameDiscription), question, solution);
