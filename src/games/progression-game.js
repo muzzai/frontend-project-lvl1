@@ -18,10 +18,15 @@ export const solution = (input) => {
   const numbersFromString = input.split(' ');
   const dotsIndex = numbersFromString.indexOf('..');
   const lastIndex = numbersFromString.length - 1;
-  if (dotsIndex === 0 || dotsIndex === lastIndex) {
-    return `${numbersFromString[2] - numbersFromString[1]}`;
-  }
-  const lastNumber = numbersFromString[lastIndex];
-  const firstNumber = numbersFromString[0];
-  return `${(lastNumber - firstNumber) / lastIndex}`;
+  const findStep = () => {
+    if (dotsIndex === 0 || dotsIndex === lastIndex) {
+      return numbersFromString[2] - numbersFromString[1];
+    }
+    const lastNumber = numbersFromString[lastIndex];
+    const firstNumber = numbersFromString[0];
+    return (lastNumber - firstNumber) / lastIndex;
+  };
+  const previous = numbersFromString[dotsIndex - 1];
+  const next = numbersFromString[dotsIndex + 1];
+  return previous ? `${parseInt(previous, 10) + findStep()}` : `${parseInt(next, 10) - findStep()}`;
 };
