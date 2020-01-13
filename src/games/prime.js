@@ -3,7 +3,7 @@ import { getRandomInt } from '..';
 const randomRange = 100;
 
 const isPrime = (number) => {
-  for (let counter = 2; counter < number; counter += 1) {
+  for (let counter = 2; counter <= Math.sqrt(number); counter += 1) {
     if (number % counter === 0) {
       return false;
     }
