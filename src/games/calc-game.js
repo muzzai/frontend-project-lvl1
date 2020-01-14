@@ -1,4 +1,7 @@
-import { getRandomInt } from '..';
+import { getRandomInt, wellcome } from '../utils';
+import engine from '..';
+
+const gameDiscription = 'What is the result of the expression?';
 
 const ops = {
   '*': (a, b) => a * b,
@@ -6,14 +9,12 @@ const ops = {
   '+': (a, b) => a + b,
 };
 
-const randomCeiling = 30;
-const number = () => getRandomInt(randomCeiling);
-const randomOperation = () => ['*', '-', '+'][getRandomInt(3)];
-export const question = () => `${number()} ${randomOperation()} ${number()}`;
-export const solution = (string) => {
-  const numbersAndOperation = string.split(' ');
-  const firstNum = parseInt(numbersAndOperation[0], 10);
-  const secondNum = parseInt(numbersAndOperation[2], 10);
-  const operation = numbersAndOperation[1];
-  return `${ops[operation](firstNum, secondNum)}`;
+const game = () => {
+  const num1 = getRandomInt(0, 100);
+  const num2 = getRandomInt(0, 100);
+  const randomOperation = ['*', '-', '+'][getRandomInt(3)];
+  console.log(`Question: ${num1} ${randomOperation} ${num2}`);
+  return `${ops[randomOperation](num1, num2)}`;
 };
+
+export default () => engine(wellcome(gameDiscription), game);

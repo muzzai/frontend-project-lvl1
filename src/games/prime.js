@@ -1,6 +1,7 @@
-import { getRandomInt } from '..';
+import { getRandomInt, wellcome } from '../utils';
+import engine from '..';
 
-const randomRange = 100;
+const gameDiscription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
   for (let counter = 2; counter <= Math.sqrt(number); counter += 1) {
@@ -10,10 +11,14 @@ const isPrime = (number) => {
   }
   return true;
 };
-export const question = () => getRandomInt(randomRange);
-export const solution = (input) => {
-  if (input < 3 || isPrime(input)) {
+
+const game = () => {
+  const num1 = getRandomInt(0, 100);
+  console.log(`Question: ${num1}`);
+  if (num1 < 3 || isPrime(num1)) {
     return 'yes';
   }
   return 'no';
 };
+
+export default () => engine(wellcome(gameDiscription), game);

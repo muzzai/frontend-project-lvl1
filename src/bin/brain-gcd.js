@@ -1,7 +1,4 @@
-#!/usr/bin/node
-import { wellcome } from '..';
-import game from '../game';
-import { question, solution } from '../games/gcd-game';
+#!/usr/bin/env node
+import start from '../games/gcd-game';
 
-const gameDiscription = 'Find the greatest common divisor!';
-game(wellcome(gameDiscription), question, solution);
+start();
