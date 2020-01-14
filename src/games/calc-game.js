@@ -12,7 +12,7 @@ const ops = {
 const game = () => {
   const num1 = getRandomInt(0, 100);
   const num2 = getRandomInt(0, 100);
-  const randomOperation = ['*', '-', '+'][getRandomInt(3)];
+  const randomOperation = ['*', '-', '+'][getRandomInt(0, 2)];
   console.log(`Question: ${num1} ${randomOperation} ${num2}`);
   return `${ops[randomOperation](num1, num2)}`;
 };
