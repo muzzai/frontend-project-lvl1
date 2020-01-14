@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const engine = (userName, game) => {
+export default (userName, game) => {
   for (let counter = 0; counter < 3; counter += 1) {
     const correctAnswer = game();
     const queryUser = readlineSync.question('Your answer: ');
@@ -11,5 +11,3 @@ const engine = (userName, game) => {
   }
   return console.log(`Congrtulations, ${userName}!`);
 };
-
-export default engine;

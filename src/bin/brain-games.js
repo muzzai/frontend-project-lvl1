@@ -1,4 +1,4 @@
-#!/usr/bin/node
-import { wellcome } from '..';
+#!/usr/bin/env node
+import start from '../games/games';
 
-wellcome('');
+start();
