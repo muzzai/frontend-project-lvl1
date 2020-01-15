@@ -1,4 +1,4 @@
-import { getRandomInt, wellcome } from '../utils';
+import getRandomInt from '../utils';
 import engine from '..';
 
 const gameDiscription = 'Find the greatest common divisor!';
@@ -16,4 +16,4 @@ const game = () => {
   return `${findGCD(num1, num2)}`;
 };
 
-export default () => engine(wellcome(gameDiscription), game);
+export default () => engine(gameDiscription, game);

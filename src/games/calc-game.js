@@ -1,4 +1,4 @@
-import { getRandomInt, wellcome } from '../utils';
+import getRandomInt from '../utils';
 import engine from '..';
 
 const gameDiscription = 'What is the result of the expression?';
@@ -17,4 +17,4 @@ const game = () => {
   return `${ops[randomOperation](num1, num2)}`;
 };
 
-export default () => engine(wellcome(gameDiscription), game);
+export default () => engine(gameDiscription, game);

@@ -1,4 +1,4 @@
-import { getRandomInt, wellcome } from '../utils';
+import getRandomInt from '../utils';
 import engine from '..';
 
 const gameDiscription = 'Answer "yes" if the number is even, otherwise answer "no"';
@@ -13,4 +13,4 @@ const game = () => {
   return 'no';
 };
 
-export default () => engine(wellcome(gameDiscription), game);
+export default () => engine(gameDiscription, game);

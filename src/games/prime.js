@@ -1,4 +1,4 @@
-import { getRandomInt, wellcome } from '../utils';
+import getRandomInt from '../utils';
 import engine from '..';
 
 const gameDiscription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -21,4 +21,4 @@ const game = () => {
   return 'no';
 };
 
-export default () => engine(wellcome(gameDiscription), game);
+export default () => engine(gameDiscription, game);

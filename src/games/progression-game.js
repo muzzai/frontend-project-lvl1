@@ -1,4 +1,4 @@
-import { getRandomInt, wellcome } from '../utils';
+import getRandomInt from '../utils';
 import engine from '..';
 
 const gameDiscription = 'What number is missing in the progression?';
@@ -18,4 +18,4 @@ const game = () => {
   return answer;
 };
 
-export default () => engine(wellcome(gameDiscription), game);
+export default () => engine(gameDiscription, game);
