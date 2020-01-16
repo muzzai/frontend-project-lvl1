@@ -1,16 +1,18 @@
 import getRandomInt from '../utils';
-import engine from '..';
-
-const gameDiscription = 'Answer "yes" if the number is even, otherwise answer "no"';
+import playTheGame from '..';
 
 const isEven = (number) => number % 2 === 0;
-const game = () => {
-  const num = getRandomInt(0, 100);
-  console.log(`Question: ${num}`);
-  if (isEven(num)) {
-    return 'yes';
-  }
-  return 'no';
+
+const game = {
+  gameDescription: 'Answer "yes" if the number is even, otherwise answer "no"',
+  askUser: () => {
+    const num = getRandomInt(0, 100);
+    console.log(`Question: ${num}`);
+    if (isEven(num)) {
+      return 'yes';
+    }
+    return 'no';
+  },
 };
 
-export default () => engine(gameDiscription, game);
+export default () => playTheGame(game);
