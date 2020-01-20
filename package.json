@@ -2,12 +2,12 @@
   "name": "frontend-project-lvl1",
   "version": "1.0.0",
   "description": "My first hexlet project",
-  "tags": [
+  "keywords": [
     "best",
     "games",
     "ever"
   ],
-  "main":"",
+  "main": "",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",

@@ -5,12 +5,12 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
 
 const isEven = (number) => number % 2 === 0;
 
-const game = () => {
+const getGameData = () => {
   const num = getRandomInt(0, 100);
   return {
-    question: num,
+    question: String(num),
     answer: isEven(num) ? 'yes' : 'no',
   };
 };
 
-export default () => playTheGame(gameDescription, game);
+export default () => playTheGame(gameDescription, getGameData);

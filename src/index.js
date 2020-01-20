@@ -7,17 +7,15 @@ export default (gameDescription, game) => {
   console.log(`${gameDescription}\n`);
   const userName = readlineSync.question('May I have your name, please: ');
   console.log(`Well, hello, ${userName}\n`);
-  for (let counter = 1; counter <= rounds; counter += 1) {
+  for (let counter = 0; counter < rounds; counter += 1) {
     const { answer, question } = game();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== answer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'\nLet's try again`);
-      break;
+      return;
     }
     console.log('Correct!');
-    if (counter === rounds) {
-      console.log(`Congratulations, ${userName}!`);
-    }
   }
+  console.log(`Congratulations, ${userName}!`);
 };
