@@ -1,6 +1,6 @@
 This is my first JavaScript project
 
-<a href="https://codeclimate.com/github/muzzai/frontend-project-lvl1"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+<a href="https://codeclimate.com/github/muzzai/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/a1efb37c65bce330ee7b/maintainability" /></a>
 <a href="https://travis-ci.com/muzzai/frontend-project-lvl1"><img src="https://travis-ci.com/muzzai/frontend-project-lvl1.svg?branch=master" /></a>
 <br>-------------installation-&-brain-progression---------<br>
 <a href="https://asciinema.org/a/7F8ASZPrrWSShG5yfbGusmA8A" target="_blank"><img src="https://asciinema.org/a/7F8ASZPrrWSShG5yfbGusmA8A.svg" /></a>
