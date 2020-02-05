@@ -1,4 +1,4 @@
-import getRandomInt from '../utils';
+import { getRandomInt, getClosedQuestion } from '../utils';
 import playTheGame from '..';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -15,12 +15,6 @@ const isPrime = (number) => {
   return true;
 };
 
-const getGameData = () => {
-  const num = getRandomInt(0, 100);
-  return {
-    question: String(num),
-    answer: isPrime(num) ? 'yes' : 'no',
-  };
-};
+const getGameData = () => getClosedQuestion(getRandomInt(0, 100), isPrime);
 
 export default () => playTheGame(gameDescription, getGameData);

@@ -1,4 +1,4 @@
-import getRandomInt from '../utils';
+import { getRandomInt } from '../utils';
 import playTheGame from '..';
 
 const gameDescription = 'What is the result of the expression?';
