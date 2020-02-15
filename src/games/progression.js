@@ -5,12 +5,14 @@ const progressionLength = 10;
 const gameDescription = 'What number is missing in the progression?';
 
 const getGameData = () => {
-  const progression = [];
   const step = getRandomInt(1, 100);
   const start = getRandomInt(0, 100);
-  for (let i = 1; i <= progressionLength; i += 1) {
-    progression.push(start + step * i);
-  }
+  const makeProgression = (prog, iterStep, len) => {
+    if (len === progressionLength) return prog;
+    const nextMember = prog[prog.length - 1] + iterStep;
+    return makeProgression([...prog, nextMember], iterStep, prog.length);
+  };
+  const progression = makeProgression([start], step);
   const hiddenMemberIndex = getRandomInt(0, progression.length - 1);
   const hiddenMember = String(progression[hiddenMemberIndex]);
   progression[hiddenMemberIndex] = '..';
